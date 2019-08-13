@@ -34,6 +34,7 @@ var Biblioteca = function () {
                 },
                 submitHandler: function (form) {
 
+                    return true;
                 }
             });
         },

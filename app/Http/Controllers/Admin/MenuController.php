@@ -14,7 +14,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        //
+        $menus = Menu::getMenu();
+        return view('admin.menu.index', compact('menus'));
     }
     /**
      * Show the form for creating a new resource.
@@ -80,4 +81,17 @@ class MenuController extends Controller
     {
         //
     }
+
+
+    public function guardarOrden(Request $request)
+    {
+        if ($request->ajax()) {
+            $menu = new Menu;
+            $menu->guardarOrden($request->menu);
+            return response()->json(['respuesta' => 'ok']);
+        } else {
+            abort(404);
+        }
+    }
+
 }
