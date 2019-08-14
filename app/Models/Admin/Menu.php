@@ -18,7 +18,11 @@ class Menu extends Model
     // En caso de NO usar el Created_at o Updated_at
     //public $timestamps = false;
 
-
+    //relaciona tablas Muchos a Muchos 'menu_rol' es la tabla destino
+    public function roles()
+    {
+        return $this->belongsToMany(Rol::class, 'menu_rol');
+    }
     
     public function getHijos($padres, $line)
     {
