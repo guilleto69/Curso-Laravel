@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class InicioController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -12,9 +13,8 @@ class InicioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {  
-        return view('inicio');
+    {
+        return view('admin.admin.index');
     }
-  
-   
+
 }
