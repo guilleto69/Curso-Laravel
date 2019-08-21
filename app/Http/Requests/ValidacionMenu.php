@@ -27,7 +27,7 @@ class ValidacionMenu extends FormRequest
     {
         return [
             //unique:<tabla>,<campo> route id permite EDITAR con igual nombre
-            'nombre' => 'required|max:50|unique:menu,nombre' . $this->route('id'),
+            'nombre' => 'required|max:50|unique:menu,nombre,' . $this->route('id'),
             //usando reglas propias en ValidarCampoUrl
             'url' => ['required', 'max:100', new ValidarCampoUrl],
             'icono' =>'nullable|max:50'

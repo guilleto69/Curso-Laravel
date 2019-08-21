@@ -3,7 +3,7 @@
 
         <div class="col-lg-8">
           <!-- old('') REPOBLA por Validacion-->
-        <input type="text" name="nombre" id="nombre" class="form-control" value="{{old('nombre')}}" required/>
+          <input type="text" name="nombre" id="nombre" class="form-control" value="{{old('nombre', $data->nombre ?? '')}}" required/>
         </div>
 </div>
 
@@ -11,7 +11,7 @@
         <label for="url" class="col-lg-3 control-label requerido">URL</label>
 
         <div class="col-lg-8">
-          <input type="text" name="url" id="url" class="form-control" value="{{old('url')}}" required/>
+          <input type="text" name="url" id="url" class="form-control" value="{{old('url', $data->url ?? '')}}" required/>
         </div>
 </div>
 
@@ -19,7 +19,7 @@
         <label for="icono" class="col-lg-3 control-label">Icono</label>
 
         <div class="col-lg-8">
-          <input type="text" name="icono" id="icono" class="form-control" value="{{old('icono')}}" />
+          <input type="text" name="icono" id="icono" class="form-control" value="{{old('icono', $data->icono ?? '')}}"/>
         </div>
 
         <div class="col-lg-1">
