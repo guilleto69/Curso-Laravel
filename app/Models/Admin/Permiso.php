@@ -11,4 +11,9 @@ class Permiso extends Model
     protected $fillable = ['nombre','slug'];
      // Campos para NO modificar
      protected $guarded = ['id'];
+
+     public function roles()
+    {
+        return $this->belongsToMany(Rol::class, 'permiso_rol', 'permiso_id', 'rol_id');
+    }
 }
